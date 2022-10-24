@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentAPI</title>
+</head>
+
+<body>
+    <h4>Add Students</h4>
+    <form action="addStudents" method="post" style="display: block">
+
+        <label for="name">Student name:</label>
+
+        <input type="text" name="name" />
+
+        <label for="age">Student age:</label>
+        <input type="number" name="age" />
+
+        <button type="submit">Add Student</button>
+
+    </form>
+    <h4>find a student by id</h4>
+    <form action="getStudentInfo" method="get" style="display: block">
+        <label for="id">Student ID:</label>
+        <input type="number" name="id" />
+        <button type="submit">Find Students</button>
+    </form>
+    <h4>Add Courses</h4>
+    <form action="addCourses" method="post" style="display: block">
+
+        <label for="name">Course name:</label>
+        <input type="text" name="name" />
+
+
+
+        <label for="teacher">Teacher name:</label>
+        <input type="text" name="teacher" />
+
+
+
+        <label for="url">Zoom link:</label>
+        <input type="text" name="url" />
+
+
+        <button type="submit">Add Course</button>
+    </form>
+
+
+    <h4>Add Students to a course</h4>
+    <form action="AddstudentToCourse" method="post" style="display: block">
+
+        <label for="studentid">Student ID:</label>
+        <input type="number" name="studentid" />
+
+
+
+        <label for="courseid">course ID:</label>
+        <input type="number" name="courseid" />
+
+
+        <button type="submit">Add student to course</button>
+
+        <h4>Create a snapshot of the data</h4>
+    </form>
+    <form action="snapshot" method="post">
+        <label for="snapshot">snapshot:</label>
+        <button type="submit" name="snapshot">Create</button>
+    </form>
+
+    <hr />
+    <h2>All students</h2>
+    <iframe src="/Allstudents" frameborder="0"></iframe>
+
+    <hr />
+    <h2>All courses</h2>
+    <iframe src="/Allcourses" frameborder="0"></iframe>
+</body>
+
+</html>
